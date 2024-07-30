@@ -1,0 +1,5 @@
+Commands
+ - cat: join one or more files sequentially or display them in the console window
+   E.g cat my_file
+
+ - more:
