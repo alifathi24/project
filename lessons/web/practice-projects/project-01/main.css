@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: antiquewhite;
+    justify-content: center;
+}
+
+header {
+    background-color: cadetblue;
+    border: 1px solid black;
+    width: 100%;
+    color: whitesmoke;
+    height: 50px;
+    padding: 30px;
+    margin: auto 0;
+}
+nav {
+    margin: auto;
+}
+a:link {
+    color: honeydew;
+    text-decoration: none;
+}
+
+a {
+
+    justify-content: space-around;
+}
