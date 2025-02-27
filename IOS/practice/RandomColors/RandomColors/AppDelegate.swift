@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  RandomColorsVC
+//  RandomColors
 //
-//  Created by Fathi Ali on 2025-02-09.
+//  Created by Fathi Ali on 2025-02-26.
 //
 
 import UIKit

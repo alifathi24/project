@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  UIKit-Intro
+//  RandomColors
 //
-//  Created by Fathi Ali on 2025-02-08.
+//  Created by Fathi Ali on 2025-02-26.
 //
 
 import UIKit

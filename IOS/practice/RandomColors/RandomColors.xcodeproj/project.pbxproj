@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		C86A5FE22D59C6810004BE47 /* RandomColorsVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomColorsVC.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C876F3A22D6F8C4B00945A09 /* RandomColors.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomColors.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C86A5FF42D59C6820004BE47 /* Exceptions for "RandomColorsVC" folder in "RandomColorsVC" target */ = {
+		C876F3B42D6F8C4B00945A09 /* Exceptions for "RandomColors" folder in "RandomColors" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = C86A5FE12D59C6810004BE47 /* RandomColorsVC */;
+			target = C876F3A12D6F8C4B00945A09 /* RandomColors */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C86A5FE42D59C6810004BE47 /* RandomColorsVC */ = {
+		C876F3A42D6F8C4B00945A09 /* RandomColors */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				C86A5FF42D59C6820004BE47 /* Exceptions for "RandomColorsVC" folder in "RandomColorsVC" target */,
+				C876F3B42D6F8C4B00945A09 /* Exceptions for "RandomColors" folder in "RandomColors" target */,
 			);
-			path = RandomColorsVC;
+			path = RandomColors;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C86A5FDF2D59C6810004BE47 /* Frameworks */ = {
+		C876F39F2D6F8C4B00945A09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,18 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C86A5FD92D59C6810004BE47 = {
+		C876F3992D6F8C4B00945A09 = {
 			isa = PBXGroup;
 			children = (
-				C86A5FE42D59C6810004BE47 /* RandomColorsVC */,
-				C86A5FE32D59C6810004BE47 /* Products */,
+				C876F3A42D6F8C4B00945A09 /* RandomColors */,
+				C876F3A32D6F8C4B00945A09 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C86A5FE32D59C6810004BE47 /* Products */ = {
+		C876F3A32D6F8C4B00945A09 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C86A5FE22D59C6810004BE47 /* RandomColorsVC.app */,
+				C876F3A22D6F8C4B00945A09 /* RandomColors.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,64 +61,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C86A5FE12D59C6810004BE47 /* RandomColorsVC */ = {
+		C876F3A12D6F8C4B00945A09 /* RandomColors */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C86A5FF52D59C6820004BE47 /* Build configuration list for PBXNativeTarget "RandomColorsVC" */;
+			buildConfigurationList = C876F3B52D6F8C4B00945A09 /* Build configuration list for PBXNativeTarget "RandomColors" */;
 			buildPhases = (
-				C86A5FDE2D59C6810004BE47 /* Sources */,
-				C86A5FDF2D59C6810004BE47 /* Frameworks */,
-				C86A5FE02D59C6810004BE47 /* Resources */,
+				C876F39E2D6F8C4B00945A09 /* Sources */,
+				C876F39F2D6F8C4B00945A09 /* Frameworks */,
+				C876F3A02D6F8C4B00945A09 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				C86A5FE42D59C6810004BE47 /* RandomColorsVC */,
+				C876F3A42D6F8C4B00945A09 /* RandomColors */,
 			);
-			name = RandomColorsVC;
+			name = RandomColors;
 			packageProductDependencies = (
 			);
-			productName = RandomColorsVC;
-			productReference = C86A5FE22D59C6810004BE47 /* RandomColorsVC.app */;
+			productName = RandomColors;
+			productReference = C876F3A22D6F8C4B00945A09 /* RandomColors.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C86A5FDA2D59C6810004BE47 /* Project object */ = {
+		C876F39A2D6F8C4B00945A09 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
-					C86A5FE12D59C6810004BE47 = {
+					C876F3A12D6F8C4B00945A09 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
-			buildConfigurationList = C86A5FDD2D59C6810004BE47 /* Build configuration list for PBXProject "RandomColorsVC" */;
+			buildConfigurationList = C876F39D2D6F8C4B00945A09 /* Build configuration list for PBXProject "RandomColors" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = C86A5FD92D59C6810004BE47;
+			mainGroup = C876F3992D6F8C4B00945A09;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = C86A5FE32D59C6810004BE47 /* Products */;
+			productRefGroup = C876F3A32D6F8C4B00945A09 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C86A5FE12D59C6810004BE47 /* RandomColorsVC */,
+				C876F3A12D6F8C4B00945A09 /* RandomColors */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C86A5FE02D59C6810004BE47 /* Resources */ = {
+		C876F3A02D6F8C4B00945A09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,7 +128,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C86A5FDE2D59C6810004BE47 /* Sources */ = {
+		C876F39E2D6F8C4B00945A09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,7 +138,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C86A5FF62D59C6820004BE47 /* Debug */ = {
+		C876F3B62D6F8C4B00945A09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F67P48UXD7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomColorsVC/Info.plist;
+				INFOPLIST_FILE = RandomColors/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -158,7 +158,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.RandomColorsVC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.RandomColors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -166,7 +166,7 @@
 			};
 			name = Debug;
 		};
-		C86A5FF72D59C6820004BE47 /* Release */ = {
+		C876F3B72D6F8C4B00945A09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -175,7 +175,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F67P48UXD7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RandomColorsVC/Info.plist;
+				INFOPLIST_FILE = RandomColors/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -186,7 +186,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.RandomColorsVC;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.RandomColors;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -194,7 +194,7 @@
 			};
 			name = Release;
 		};
-		C86A5FF82D59C6820004BE47 /* Debug */ = {
+		C876F3B82D6F8C4B00945A09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -257,7 +257,7 @@
 			};
 			name = Debug;
 		};
-		C86A5FF92D59C6820004BE47 /* Release */ = {
+		C876F3B92D6F8C4B00945A09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -316,25 +316,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C86A5FDD2D59C6810004BE47 /* Build configuration list for PBXProject "RandomColorsVC" */ = {
+		C876F39D2D6F8C4B00945A09 /* Build configuration list for PBXProject "RandomColors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C86A5FF82D59C6820004BE47 /* Debug */,
-				C86A5FF92D59C6820004BE47 /* Release */,
+				C876F3B82D6F8C4B00945A09 /* Debug */,
+				C876F3B92D6F8C4B00945A09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C86A5FF52D59C6820004BE47 /* Build configuration list for PBXNativeTarget "RandomColorsVC" */ = {
+		C876F3B52D6F8C4B00945A09 /* Build configuration list for PBXNativeTarget "RandomColors" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C86A5FF62D59C6820004BE47 /* Debug */,
-				C86A5FF72D59C6820004BE47 /* Release */,
+				C876F3B62D6F8C4B00945A09 /* Debug */,
+				C876F3B72D6F8C4B00945A09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C86A5FDA2D59C6810004BE47 /* Project object */;
+	rootObject = C876F39A2D6F8C4B00945A09 /* Project object */;
 }
