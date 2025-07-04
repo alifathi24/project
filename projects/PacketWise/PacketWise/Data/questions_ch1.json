@@ -1,0 +1,12 @@
+[
+  {
+    "id": "6E5F0F3B-5C8A-4D3B-8AB6-1C8D7E3A8F9D",
+    "question": "Which protocol is responsible for logical addressing in the TCP/IP model?",
+    "options": ["TCP", "MAC", "IP", "ARP"],
+    "correctAnswer": 2,
+    "explanation": "IP (Internet Protocol) handles logical addressing and routing.",
+    "chapter": "1",
+    "isBookmarked": false
+  }
+]
+
