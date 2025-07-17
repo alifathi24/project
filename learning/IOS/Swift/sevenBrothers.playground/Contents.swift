@@ -1,3 +1,7 @@
-import UIKit
-
-var greeting = "Hello, playground"
+print("Aapo")
+print("Eero")
+print("Juhani")
+print("Lauri")
+print("Simeoni")
+print("Timo")
+print("Tuomas")
