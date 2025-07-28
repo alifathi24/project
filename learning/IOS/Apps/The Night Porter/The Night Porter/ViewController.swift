@@ -1,26 +1,17 @@
-//
-//  ViewController.swift
-//  The Night Porter
-//
-//  Created by Fathi Ali on 2025-07-08.
-//
+import UIKit // Assuming this is for iOS development
 
-import UIKit
-
-class ViewController: UIViewController {
-
+class MyViewController: UIViewController {
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // This code runs once, after the view and its initial subviews are loaded.
+        // It will make all *existing* subviews green when the view loads.
+        
     }
-
-    @IBAction func darkMode(_ sender: Any) {
-        view.backgroundColor = .darkGray    }
-    let everything = view.subviews
-    for eachView in everything {
-        if eachView is UILabel {
-            
-        }
+    
+    @IBAction func darkMode(_ sender: UIButton) {
+        view.backgroundColor = .darkGray
     }
 }
 
