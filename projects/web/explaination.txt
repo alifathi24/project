@@ -1,0 +1,51 @@
+Explanation of the Structure:
+
+jobbot.com/ (Root Directory): Contains overall project files like README.md, .gitignore, and global configuration files.
+
+frontend/: This clearly separates the client-side application.
+
+public/: For static files served directly by the web server (e.g., index.html).
+
+src/: Contains all the development code for your frontend application.
+
+assets/: For static assets that are processed by your build tools.
+
+components/: Reusable UI elements. Organize them in their own subfolders for better encapsulation (e.g., Button/Button.js, Button/Button.module.css).
+
+pages/: Represents different views or routes of your application.
+
+services/: For interacting with your backend API.
+
+utils/: Generic helper functions.
+
+hooks/: (If using React) Custom hooks for reusable logic.
+
+store/: For state management (e.g., Redux, Vuex, Context API).
+
+styles/: Global styles, Sass variables, etc.
+
+backend/: This separates your server-side application logic.
+
+src/: Contains the core backend code.
+
+controllers/: Handle requests and responses, often calling services.
+
+models/: Define data structures and interact with the database.
+
+routes/: Define your API endpoints and link them to controllers.
+
+services/: Contain the business logic, interacting with models and potentially other services (like your AI integration).
+
+utils/: Helper functions for the backend.
+
+config/: Configuration for databases, external APIs, etc.
+
+middlewares/: Functions that run before a request reaches a controller (e.g., authentication).
+
+ai_models/: This is crucial for your project! It keeps your AI-related code separate and organized. You'll likely have different models for different tasks (parsing, matching, generating).
+
+Each subfolder should contain the model files, any required scripts, and a requirements.txt if it has specific Python dependencies.
+
+database/: For database-specific files like migrations, seeds, or schema definitions if you're managing your database directly.
+
+devops/: For files related to deployment, continuous integration/delivery, and infrastructure.
