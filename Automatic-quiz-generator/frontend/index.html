@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz Generator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900">
+  <div class="max-w-3xl mx-auto p-6 space-y-6">
+    <header class="text-center">
+      <h1 class="text-3xl font-bold">AI Quiz Generator</h1>
+      <p class="text-sm text-gray-600">Create MCQs from a topic or pasted text. Then export & share.</p>
+    </header>
+
+    <!-- Config -->
+    <section class="bg-white rounded-2xl shadow p-5 space-y-4">
+      <label class="block text-sm font-medium">Backend URL</label>
+      <input id="apiBase" class="w-full border rounded-xl p-3" placeholder="http://localhost:8000" value="http://localhost:8000" />
+
+      <div class="grid md:grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm font-medium">Topic</label>
+          <input id="topic" class="w-full border rounded-xl p-3" placeholder="e.g., Photosynthesis" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium">Number of Questions</label>
+          <input id="nq" type="number" min="1" max="10" value="5" class="w-full border rounded-xl p-3" />
+        </div>
+      </div>
+
+      <div>
+        <label class="block text-sm font-medium">Or paste source text</label>
+        <textarea id="text" rows="6" class="w-full border rounded-xl p-3" placeholder="Paste content here (optional)"></textarea>
+      </div>
+
+      <button id="genBtn" class="w-full md:w-auto px-5 py-3 rounded-xl bg-black text-white">Generate Quiz</button>
+      <span id="status" class="ml-3 text-sm"></span>
+    </section>
+
+    <!-- Results -->
+    <section id="results" class="hidden bg-white rounded-2xl shadow p-5 space-y-4">
+      <div class="flex items-center justify-between">
+        <h2 class="text-xl font-semibold">Generated Questions</h2>
+        <div class="space-x-2">
+          <button id="exportCsv" class="px-4 py-2 rounded-xl border">Export CSV</button>
+          <button id="clearBtn" class="px-4 py-2 rounded-xl border">Clear</button>
+        </div>
+      </div>
+      <div id="list" class="space-y-4"></div>
+    </section>
+
+    <!-- Waitlist -->
+    <section class="bg-white rounded-2xl shadow p-5 space-y-4">
+      <h2 class="text-xl font-semibold">Join the Waitlist</h2>
+      <div class="grid md:grid-cols-2 gap-4">
+        <input id="wlName" class="border rounded-xl p-3" placeholder="Your name" />
+        <input id="wlEmail" class="border rounded-xl p-3" placeholder="Email" />
+        <select id="wlRole" class="border rounded-xl p-3">
+          <option value="student">Student</option>
+          <option value="teacher">Teacher</option>
+          <option value="admin">School Admin</option>
+          <option value="other">Other</option>
+        </select>
+        <input id="wlNotes" class="border rounded-xl p-3" placeholder="School / Course (optional)" />
+      </div>
+      <button id="wlBtn" class="px-5 py-3 rounded-xl bg-indigo-600 text-white">Join</button>
+      <span id="wlStatus" class="ml-3 text-sm"></span>
+    </section>
+  </div>
+
+  <script>
+    const $ = (id) => document.getElementById(id);
+    let quiz = [];
+
+    function render() {
+      const list = $("list");
+      list.innerHTML = "";
+      quiz.forEach((q, idx) => {
+        const card = document.createElement('div');
+        card.className = 'border rounded-xl p-4 space-y-2';
+        card.innerHTML = `
+          <div class="text-sm text-gray-500">Q${idx+1}</div>
+          <textarea class="w-full border rounded-xl p-3" data-k="question">${q.question}</textarea>
+          <div class="grid md:grid-cols-2 gap-3">
+            <input class="border rounded-xl p-3" data-k="correct_answer" value="${q.correct_answer}">
+            ${q.incorrect_answers.map((a,i)=>`<input class=\"border rounded-xl p-3\" data-k=\"incorrect_${i}\" value=\"${a}\">`).join('')}
+          </div>
+        `;
+        card.addEventListener('input', (e) => {
+          const k = e.target.getAttribute('data-k');
+          if (k === 'question') q.question = e.target.value;
+          else if (k === 'correct_answer') q.correct_answer = e.target.value;
+          else if (k && k.startsWith('incorrect_')) {
+            const i = parseInt(k.split('_')[1], 10);
+            q.incorrect_answers[i] = e.target.value;
+          }
+        });
+        list.appendChild(card);
+      });
+      $("results").classList.toggle('hidden', quiz.length === 0);
+    }
+
+    $("genBtn").addEventListener('click', async () => {
+      const base = $("apiBase").value.replace(/\/$/, '');
+      const payload = {
+        topic: $("topic").value || null,
+        text: $("text").value || null,
+        n_questions: Math.max(1, Math.min(10, parseInt($("nq").value || '5', 10)))
+      };
+      $("status").textContent = 'Generating…';
+      try {
+        const res = await fetch(`${base}/generate`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        if (!res.ok) throw new Error(await res.text());
+        const data = await res.json();
+        quiz = data.items || [];
+        render();
+        $("status").textContent = 'Done';
+      } catch (e) {
+        console.error(e);
+        $("status").textContent = 'Error: ' + e.message;
+      }
+    });
+
+    $("clearBtn").addEventListener('click', () => { quiz = []; render(); });
+
+    $("exportCsv").addEventListener('click', () => {
+      const rows = [["question","correct_answer","incorrect_1","incorrect_2","incorrect_3"]];
+      quiz.forEach(q => rows.push([q.question, q.correct_answer, ...q.incorrect_answers]));
+      const csv = rows.map(r => r.map(v => '"' + String(v).replaceAll('"','""') + '"').join(',')).join('\n');

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Nursing Quiz Generator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .option-btn.correct {
+        background-color: #22c55e !important; /* green-500 */
+        color: white !important;
+        border-color: #16a34a !important; /* green-600 */
+      }
+      .option-btn.incorrect {
+        background-color: #ef4444 !important; /* red-500 */
+        color: white !important;
+        border-color: #dc2626 !important; /* red-600 */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <div class="container mx-auto px-4 py-8 md:py-16 max-w-2xl">
+      <!-- Header Section -->
+      <header class="text-center mb-8">
+        <h1 class="text-4xl md:text-5xl font-bold text-blue-600">
+          AI Nursing Quiz Generator
+        </h1>
+        <p class="mt-4 text-lg text-gray-600">
+          Test your knowledge! Enter any nursing topic to generate a quiz
+          question.
+        </p>
+      </header>
+
+      <!-- Generator Form -->
+      <div class="bg-white p-6 rounded-2xl shadow-lg mb-8">
+        <div class="flex flex-col sm:flex-row gap-4">
+          <input
+            type="text"
+            id="topicInput"
+            placeholder="E.g., 'Cardiac Pharmacology' or 'Pediatric Milestones'"
+            class="flex-grow w-full px-4 py-3 text-lg border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+          />
+          <button
+            id="generateBtn"
+            class="w-full sm:w-auto bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-transform transform hover:scale-105"
+          >
+            Generate Quiz
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Display Area -->
+      <div
+        id="quizContainer"
+        class="bg-white p-6 rounded-2xl shadow-lg min-h-[200px] flex items-center justify-center"
+      >
+        <!-- Loading Spinner -->
+        <div id="loader" class="hidden text-center">
+          <svg
+            class="animate-spin h-8 w-8 text-blue-600 mx-auto"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            ></circle>
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+            ></path>
+          </svg>
+          <p class="mt-2 text-gray-500">Generating your question...</p>
+        </div>
+
+        <!-- Quiz Content -->
+        <div id="quizContent" class="hidden w-full">
+          <h2
+            id="question"
+            class="text-2xl font-semibold mb-6 text-gray-800"
+          ></h2>
+          <div id="options" class="grid grid-cols-1 md:grid-cols-2 gap-4"></div>
+        </div>
+
+        <!-- Initial Message -->
+        <div id="initialMessage" class="text-center text-gray-500">
+          <p>Your quiz question will appear here.</p>
+        </div>
+      </div>
+
+      <!-- Answer/Result Area -->
+      <div id="resultContainer" class="mt-6 p-4 rounded-xl text-center hidden">
+        <p id="resultText" class="text-lg font-medium"></p>
+      </div>
+    </div>
+
+    <script>
+      // DOM Element References
+      const topicInput = document.getElementById("topicInput");
+      const generateBtn = document.getElementById("generateBtn");
+      const quizContainer = document.getElementById("quizContainer");
+      const loader = document.getElementById("loader");
+      const quizContent = document.getElementById("quizContent");
+      const initialMessage = document.getElementById("initialMessage");
+      const questionEl = document.getElementById("question");
+      const optionsEl = document.getElementById("options");
+      const resultContainer = document.getElementById("resultContainer");
+      const resultText = document.getElementById("resultText");
+
+      let correctAnswerIndex = null;
+
+      /**
+       * Fetches a quiz question from the Gemini API.
+       * @param {string} topic The nursing topic for the quiz question.
+       */
+      async function generateQuiz(topic) {
+        // Show loader and hide previous content
+        loader.classList.remove("hidden");
+        quizContent.classList.add("hidden");
+        initialMessage.classList.add("hidden");
+        resultContainer.classList.add("hidden");
+        generateBtn.disabled = true;
+        generateBtn.classList.add("opacity-50", "cursor-not-allowed");
+
+        // The prompt for the AI model
+        const prompt = `Generate a single, high-quality multiple-choice question for a nurse about the topic: "${topic}". The question should be challenging but fair. Provide 4 options. Ensure one option is clearly the correct answer.`;
+
+        // The desired JSON structure for the response
+        const schema = {
+          type: "OBJECT",
+          properties: {
+            question: { type: "STRING" },
+            options: {
+              type: "ARRAY",
+              items: { type: "STRING" },
+            },
+            answer: {
+              type: "NUMBER",
+              description:
+                "The index (0-3) of the correct option in the options array.",
+            },
+          },
+          required: ["question", "options", "answer"],
+        };
+
+        const payload = {
+          contents: [{ parts: [{ text: prompt }] }],
+          generationConfig: {
+            responseMimeType: "application/json",
+            responseSchema: schema,
+          },
+        };
+
+        const apiKey = ""; // API key will be injected by the environment
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+        try {
+          // API call with exponential backoff
+          const response = await fetchWithBackoff(apiUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+          });
+
+          if (!response.ok) {
+            throw new Error(
+              `API request failed with status ${response.status}`
+            );
+          }
+
+          const result = await response.json();
+
+          if (result.candidates && result.candidates.length > 0) {
+            const quizData = JSON.parse(
+              result.candidates[0].content.parts[0].text
+            );
+            displayQuiz(quizData);
+          } else {
+            throw new Error("No content received from API.");
+          }
+        } catch (error) {
+          console.error("Error generating quiz:", error);
+          displayError(
+            "Sorry, we couldn't generate a quiz. Please try a different topic or try again later."
+          );
+        } finally {
+          // Hide loader and re-enable button
+          loader.classList.add("hidden");
+          generateBtn.disabled = false;
+          generateBtn.classList.remove("opacity-50", "cursor-not-allowed");
+        }
+      }
+
+      /**
+       * Fetch with exponential backoff retry mechanism.
+       */
+      async function fetchWithBackoff(url, options, retries = 3, delay = 1000) {
+        try {
+          return await fetch(url, options);
+        } catch (err) {
+          if (retries > 0) {
+            await new Promise((resolve) => setTimeout(resolve, delay));
+            return fetchWithBackoff(url, options, retries - 1, delay * 2);
+          }
+          throw err;
+        }
+      }
+
+      /**
+       * Displays the fetched quiz question and options on the page.
+       * @param {object} quizData The quiz data from the API.
+       */
+      function displayQuiz(quizData) {
+        questionEl.textContent = quizData.question;
+        optionsEl.innerHTML = ""; // Clear previous options
+        correctAnswerIndex = quizData.answer;
+
+        quizData.options.forEach((option, index) => {
+          const button = document.createElement("button");
+          button.textContent = option;
+          button.dataset.index = index;
+          button.className =
+            "option-btn w-full text-left p-4 border-2 border-gray-300 rounded-lg hover:bg-gray-100 hover:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition";
+          button.addEventListener("click", handleOptionSelect);
+          optionsEl.appendChild(button);
+        });
+
+        quizContent.classList.remove("hidden");
+      }
+
+      /**
+       * Displays an error message in the quiz container.
+       * @param {string} message The error message to display.
+       */
+      function displayError(message) {
+        initialMessage.classList.remove("hidden");
+        initialMessage.textContent = message;
+        initialMessage.classList.add("text-red-500");
+      }
+
+      /**
+       * Handles the user selecting a multiple-choice option.
+       * @param {Event} event The click event from the option button.
+       */
+      function handleOptionSelect(event) {
+        const selectedButton = event.currentTarget;
+        const selectedIndex = parseInt(selectedButton.dataset.index);
+        const isCorrect = selectedIndex === correctAnswerIndex;
+
+        // Disable all buttons after a selection
+        const allOptionButtons = optionsEl.querySelectorAll(".option-btn");
+        allOptionButtons.forEach((btn) => {
+          btn.disabled = true;
+          btn.classList.add("cursor-not-allowed");
+          // Highlight correct and incorrect answers
+          if (parseInt(btn.dataset.index) === correctAnswerIndex) {
+            btn.classList.add("correct");
+          } else if (parseInt(btn.dataset.index) === selectedIndex) {
+            btn.classList.add("incorrect");
+          }
+        });
+
+        // Show result message
+        resultContainer.classList.remove("hidden");
+        if (isCorrect) {
+          resultContainer.classList.add("bg-green-100", "text-green-800");
+          resultContainer.classList.remove("bg-red-100", "text-red-800");
+          resultText.textContent = "Correct! Great job!";
+        } else {
+          resultContainer.classList.add("bg-red-100", "text-red-800");
+          resultContainer.classList.remove("bg-green-100", "text-green-800");
+          resultText.textContent =
+            "Not quite. The correct answer is highlighted in green.";
+        }
+      }
+
+      // Event Listener for the generate button
+      generateBtn.addEventListener("click", () => {
+        const topic = topicInput.value.trim();
+        if (topic) {
+          generateQuiz(topic);
+        } else {
+          // Show a temporary message if the input is empty
+          topicInput.placeholder = "Please enter a topic first!";
+          topicInput.classList.add("placeholder-red-500");
+          setTimeout(() => {
+            topicInput.placeholder =
+              "E.g., 'Cardiac Pharmacology' or 'Pediatric Milestones'";
+            topicInput.classList.remove("placeholder-red-500");
+          }, 2000);
+        }
+      });
+
+      // Allow pressing Enter to generate quiz
+      topicInput.addEventListener("keyup", (event) => {
+        if (event.key === "Enter") {
+          event.preventDefault();
+          generateBtn.click();
+        }
+      });
+    </script>
+  </body>
+</html>
