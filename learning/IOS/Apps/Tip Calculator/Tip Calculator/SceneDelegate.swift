@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Tip Calculator
 //
-//  Created by Fathi Ali on 2025-07-14.
+//  Created by Fathi Ali on 2025-08-19.
 //
 
 import UIKit
