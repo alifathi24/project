@@ -8,10 +8,16 @@ random_choice = random.randint(0, 101)
 print(random_choice)
 
 if random_choice > num:
+    print(f"You guessed {num}")
+    print(f"The number is {random_choice}")
     print("Please try again!")
 elif random_choice < num:
+    print(f"You guessed {num}")
+    print(f"The number is {random_choice}")
     print("Please try again!")
 elif random_choice == num:
+    print(f"You guessed {num}")
+    print(f"The number is {random_choice}")
     print("You got it!")
 else:
     print("Please try again!")
