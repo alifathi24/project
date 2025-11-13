@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Johnson & Associates CPA | Expert Accounting Services</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Inter font and new color scheme -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+            colors: {
+              // New Green Theme
+              primary: "#166534", // Deep, professional green
+              secondary: "#F7FAFC", // Very light gray ("blank")
+              accent: "#22C55E", // Brighter, modern green
+            },
+          },
+        },
+      };
+    </script>
+    <!-- Custom Styles -->
+    <style>
+      /* Small style adjustments */
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      /* Updated Hero Background with new green gradient */
+      .hero-bg {
+        background-color: #166534; /* primary color */
+        background-image: linear-gradient(135deg, #166534 0%, #15803d 100%);
+      }
+      /* Simple scroll-behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+  <body class="bg-white text-gray-800 antialiased">
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a href="#" class="text-2xl font-bold text-primary">
+          Johnson & Assoc. CPA
+        </a>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-6">
+          <a
+            href="#home"
+            class="text-gray-600 hover:text-primary transition duration-300"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-gray-600 hover:text-primary transition duration-300"
+            >About Us</a
+          >
+          <a
+            href="#services"
+            class="text-gray-600 hover:text-primary transition duration-300"
+            >Services</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-600 hover:text-primary transition duration-300"
+            >Contact</a
+          >
+        </div>
+
+        <!-- CTA Button -->
+        <a
+          href="#contact"
+          class="hidden md:block bg-accent text-white px-5 py-2 rounded-full font-medium hover:bg-primary transition duration-300"
+        >
+          Free Consultation
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden text-primary focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </nav>
+
+      <!-- Mobile Menu (Hidden by default) -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <a href="#home" class="block px-6 py-3 text-gray-600 hover:bg-secondary"
+          >Home</a
+        >
+        <a
+          href="#about"
+          class="block px-6 py-3 text-gray-600 hover:bg-secondary"
+          >About Us</a
+        >
+        <a
+          href="#services"
+          class="block px-6 py-3 text-gray-600 hover:bg-secondary"
+          >Services</a
+        >
+        <a
+          href="#contact"
+          class="block px-6 py-3 text-gray-600 hover:bg-secondary"
+          >Contact</a
+        >
+        <a
+          href="#contact"
+          class="block px-6 py-3 text-white bg-accent hover:bg-primary m-4 rounded-lg text-center"
+          >Free Consultation</a
+        >
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero-bg text-white py-24 md:py-32">
+        <div class="container mx-auto px-6 text-center">
+          <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
+            Clarity & Confidence in Your Finances
+          </h1>
+          <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+            Expert tax, audit, and advisory services for businesses and
+            individuals.
+          </p>
+          <a
+            href="#contact"
+            class="bg-white text-primary px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transition duration-300"
+          >
+            Schedule Your Consultation
+          </a>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about" class="py-20 bg-secondary">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-wrap md:flex-nowrap items-center -mx-4">
+            <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
+              <img
+                src="https://placehold.co/600x400/166534/FFFFFF?text=Our+Team&font=inter"
+                alt="Our Professional Team"
+                class="rounded-lg shadow-xl w-full"
+              />
+            </div>
+            <div class="w-full md:w-1/2 px-4">
+              <span class="text-accent font-semibold">About Our Firm</span>
+              <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                Your Trusted Financial Partners
+              </h2>
+              <p class="text-gray-600 mb-4 text-lg">
+                Johnson & Associates has been providing premier accounting
+                services for over 20 years. We pride ourselves on a client-first
+                approach, combining deep industry knowledge with personalized
+                strategies to help you achieve your financial goals.
+              </p>
+              <p class="text-gray-600 mb-6">
+                Our team of certified public accountants is dedicated to
+                upholding the highest standards of integrity and
+                professionalism. We're not just accountants; we're your partners
+                in success.
+              </p>
+              <a
+                href="#contact"
+                class="bg-primary text-white px-6 py-3 rounded-full font-medium hover:bg-accent transition duration-300"
+              >
+                Meet the Team
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <span class="text-accent font-semibold">Our Services</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Comprehensive Financial Solutions
+            </h2>
+            <p class="text-gray-600 max-w-xl mx-auto">
+              We offer a wide range of services tailored to meet your unique
+              needs, whether personal or professional.
+            </p>
+          </div>
+
+          <!-- Service Cards -->
+          <div class="grid md:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div
+              class="bg-secondary rounded-lg shadow-lg p-8 transform hover:-translate-y-2 transition duration-300"
+            >
+              <div class="text-primary mb-4">
+                <svg
+                  class="w-12 h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 14l6-6m-5.5 6.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM12 2a10 10 0 100 20 10 10 0 000-20z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                Tax Preparation & Planning
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Minimize your liabilities and maximize your returns. We handle
+                everything from individual returns to complex corporate tax
+                strategies.
+              </p>
+              <a href="#" class="text-accent font-medium hover:text-primary"
+                >Learn More &rarr;</a
+              >
+            </div>
+            <!-- Service 2 -->
+            <div
+              class="bg-secondary rounded-lg shadow-lg p-8 transform hover:-translate-y-2 transition duration-300"
+            >
+              <div class="text-primary mb-4">
+                <svg
+                  class="w-12 h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12 12 0 0012 21c4.64 0 8.57-3.28 10.11-7.697"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                Audit & Assurance
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Gain credibility with stakeholders through meticulous and
+                independent financial statement audits and reviews.
+              </p>
+              <a href="#" class="text-accent font-medium hover:text-primary"
+                >Learn More &rarr;</a
+              >
+            </div>
+            <!-- Service 3 -->
+            <div
+              class="bg-secondary rounded-lg shadow-lg p-8 transform hover:-translate-y-2 transition duration-300"
+            >
+              <div class="text-primary mb-4">
+                <svg
+                  class="w-12 h-12"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8v-2m0 2a2 2 0 100 4m0-4a2 2 0 110 4m0-4v-2m0 2a2 2 0 100 4m0-4a2 2 0 110 4m6-8v-2m0 2a2 2 0 100 4m0-4a2 2 0 110 4"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-gray-900 mb-3">
+                Business Advisory
+              </h3>
+              <p class="text-gray-600 mb-4">
+                From entity formation to succession planning, we provide
+                strategic guidance to help your business thrive at every stage.
+              </p>
+              <a href="#" class="text-accent font-medium hover:text-primary"
+                >Learn More &rarr;</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="py-20 bg-secondary">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-12">
+            <span class="text-accent font-semibold">Get In Touch</span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Request a Free Consultation
+            </h2>
+            <p class="text-gray-600 max-w-xl mx-auto">
+              Have questions? We're here to help. Fill out the form below and
+              one of our experts will be in touch shortly.
+            </p>
+          </div>
+
+          <!-- Form & Message Box -->
+          <div class="max-w-2xl mx-auto">
+            <!-- Success/Error Message Box -->
+            <div
+              id="form-message"
+              class="hidden p-4 rounded-lg mb-6 text-center"
+            ></div>
+
+            <!-- Contact Form -->
+            <form id="contact-form" class="bg-white p-8 rounded-lg shadow-xl">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="mb-4">
+                  <label for="name" class="block text-gray-700 font-medium mb-2"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+                    required
+                  />
+                </div>
+                <div class="mb-4">
+                  <label
+                    for="email"
+                    class="block text-gray-700 font-medium mb-2"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="mb-4">
+                <label
+                  for="service"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Service of Interest</label
+                >
+                <select
+                  id="service"
+                  name="service"
+                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent bg-white"
+                >
+                  <option>Tax Preparation</option>
+                  <option>Audit & Assurance</option>
+                  <option>Business Advisory</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div class="mb-6">
+                <label
+                  for="message"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-accent"
+                  placeholder="How can we help you?"
+                ></textarea>
+              </div>
+              <div class="text-center">
+                <button
+                  type="submit"
+                  class="bg-accent text-white px-10 py-3 rounded-full font-bold text-lg hover:bg-primary transition duration-300"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+      <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- About -->
+          <div>
+            <h4 class="text-white text-xl font-bold mb-4">
+              Johnson & Assoc. CPA
+            </h4>
+            <p class="mb-4">
+              Providing expert financial guidance with integrity and precision.
+            </p>
+            <p>&copy; 2025 Johnson & Associates. All rights reserved.</p>
+          </div>
+          <!-- Quick Links -->
+          <div>
+            <h4 class="text-white text-lg font-semibold mb-4">Quick Links</h4>
+            <ul class="space-y-2">
+              <li><a href="#about" class="hover:text-white">About Us</a></li>
+              <li><a href="#services" class="hover:text-white">Services</a></li>
+              <li><a href="#contact" class="hover:text-white">Contact</a></li>
+              <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <!-- Contact Info -->
+          <div>
+            <h4 class="text-white text-lg font-semibold mb-4">Contact Us</h4>
+            <ul class="space-y-2">
+              <li>123 Main Street, Suite 400</li>
+              <li>Anytown, USA 12345</li>
+              <li>(123) 456-7890</li>
+              <li>contact@johnsoncpa.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+              // --- Mobile Menu Toggle ---
+              const menuBtn = document.getElementById('mobile-menu-btn');
+              const mobileMenu = document.getElementById('mobile-menu');
+
+              menuBtn.addEventListener('click', () => {
+                  mobileMenu.classList.toggle('hidden');
+              });
+
+              // Close mobile menu when a link is clicked
+              mobileMenu.querySelectorAll('a').forEach(link => {
+                  link.addEventListener('click', () => {
+                      mobileMenu.classList.add('hidden');
+      Row 210, Col 43
+                  });
+              });
+
+              // --- Contact Form Handling ---
+              const contactForm = document.getElementById('contact-form');
+              const formMessage = document.getElementById('form-message');
+
+              contactForm.addEventListener('submit', function(e) {
+                  e.preventDefault(); // Prevent actual form submission
+
+                  // Get form values (in a real app, you'd send this to a server)
+                  const name = document.getElementById('name').value;
+                  const email = document.getElementById('email').value;
+
+                  // Simple validation
+                  if (!name || !email) {
+                      formMessage.textContent = 'Please fill out all required fields.';
+                      formMessage.className = 'block bg-red-100 text-red-700 p-4 rounded-lg mb-6 text-center';
+                      formMessage.classList.remove('hidden');
+                      return;
+                  }
+
+                  // Show success message
+                  formMessage.textContent = `Thank you, ${name}! Your message has been received. We will contact you at ${email} shortly.`;
+                  formMessage.className = 'block bg-green-100 text-green-700 p-4 rounded-lg mb-6 text-center';
+                  formMessage.classList.remove('hidden');
+
+                  // Clear the form
+                  contactForm.reset();
+              });
+    </script>
+  </body>
+</html>
