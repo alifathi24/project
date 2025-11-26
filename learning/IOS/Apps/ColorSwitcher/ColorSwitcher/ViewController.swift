@@ -1,24 +1,19 @@
 //
 //  ViewController.swift
-//  SayHello
+//  ColorSwitcher
 //
-//  Created by Fathi Ali on 2025-11-23.
+//  Created by Fathi Ali on 2025-11-25.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var sayHello: UILabel!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
-    @IBAction func sayHello(_ sender: Any) {
-        sayHello.text = "Hello World!"
-    }
-    
+
 }
 

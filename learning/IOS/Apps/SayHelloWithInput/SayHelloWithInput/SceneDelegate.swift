@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  SayHello
+//  SayHelloWithInput
 //
 //  Created by Fathi Ali on 2025-11-23.
 //

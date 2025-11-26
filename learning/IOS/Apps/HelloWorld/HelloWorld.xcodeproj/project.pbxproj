@@ -7,32 +7,32 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		C8321AF32ED41E1B002A8B16 /* SayHello.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SayHello.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8321AD22ED41B6E002A8B16 /* HelloWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		C8321B052ED41E1C002A8B16 /* Exceptions for "SayHello" folder in "SayHello" target */ = {
+		C8321AE42ED41B6F002A8B16 /* Exceptions for "HelloWorld" folder in "HelloWorld" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = C8321AF22ED41E1B002A8B16 /* SayHello */;
+			target = C8321AD12ED41B6E002A8B16 /* HelloWorld */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C8321AF52ED41E1B002A8B16 /* SayHello */ = {
+		C8321AD42ED41B6E002A8B16 /* HelloWorld */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				C8321B052ED41E1C002A8B16 /* Exceptions for "SayHello" folder in "SayHello" target */,
+				C8321AE42ED41B6F002A8B16 /* Exceptions for "HelloWorld" folder in "HelloWorld" target */,
 			);
-			path = SayHello;
+			path = HelloWorld;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C8321AF02ED41E1B002A8B16 /* Frameworks */ = {
+		C8321ACF2ED41B6E002A8B16 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,18 +42,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C8321AEA2ED41E1B002A8B16 = {
+		C8321AC92ED41B6E002A8B16 = {
 			isa = PBXGroup;
 			children = (
-				C8321AF52ED41E1B002A8B16 /* SayHello */,
-				C8321AF42ED41E1B002A8B16 /* Products */,
+				C8321AD42ED41B6E002A8B16 /* HelloWorld */,
+				C8321AD32ED41B6E002A8B16 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C8321AF42ED41E1B002A8B16 /* Products */ = {
+		C8321AD32ED41B6E002A8B16 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C8321AF32ED41E1B002A8B16 /* SayHello.app */,
+				C8321AD22ED41B6E002A8B16 /* HelloWorld.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,64 +61,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C8321AF22ED41E1B002A8B16 /* SayHello */ = {
+		C8321AD12ED41B6E002A8B16 /* HelloWorld */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C8321B062ED41E1C002A8B16 /* Build configuration list for PBXNativeTarget "SayHello" */;
+			buildConfigurationList = C8321AE52ED41B6F002A8B16 /* Build configuration list for PBXNativeTarget "HelloWorld" */;
 			buildPhases = (
-				C8321AEF2ED41E1B002A8B16 /* Sources */,
-				C8321AF02ED41E1B002A8B16 /* Frameworks */,
-				C8321AF12ED41E1B002A8B16 /* Resources */,
+				C8321ACE2ED41B6E002A8B16 /* Sources */,
+				C8321ACF2ED41B6E002A8B16 /* Frameworks */,
+				C8321AD02ED41B6E002A8B16 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				C8321AF52ED41E1B002A8B16 /* SayHello */,
+				C8321AD42ED41B6E002A8B16 /* HelloWorld */,
 			);
-			name = SayHello;
+			name = HelloWorld;
 			packageProductDependencies = (
 			);
-			productName = SayHello;
-			productReference = C8321AF32ED41E1B002A8B16 /* SayHello.app */;
+			productName = HelloWorld;
+			productReference = C8321AD22ED41B6E002A8B16 /* HelloWorld.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C8321AEB2ED41E1B002A8B16 /* Project object */ = {
+		C8321ACA2ED41B6E002A8B16 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2610;
 				LastUpgradeCheck = 2610;
 				TargetAttributes = {
-					C8321AF22ED41E1B002A8B16 = {
+					C8321AD12ED41B6E002A8B16 = {
 						CreatedOnToolsVersion = 26.1.1;
 					};
 				};
 			};
-			buildConfigurationList = C8321AEE2ED41E1B002A8B16 /* Build configuration list for PBXProject "SayHello" */;
+			buildConfigurationList = C8321ACD2ED41B6E002A8B16 /* Build configuration list for PBXProject "HelloWorld" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = C8321AEA2ED41E1B002A8B16;
+			mainGroup = C8321AC92ED41B6E002A8B16;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = C8321AF42ED41E1B002A8B16 /* Products */;
+			productRefGroup = C8321AD32ED41B6E002A8B16 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C8321AF22ED41E1B002A8B16 /* SayHello */,
+				C8321AD12ED41B6E002A8B16 /* HelloWorld */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C8321AF12ED41E1B002A8B16 /* Resources */ = {
+		C8321AD02ED41B6E002A8B16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -128,7 +128,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C8321AEF2ED41E1B002A8B16 /* Sources */ = {
+		C8321ACE2ED41B6E002A8B16 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -138,7 +138,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C8321B072ED41E1C002A8B16 /* Debug */ = {
+		C8321AE62ED41B6F002A8B16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -147,7 +147,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F67P48UXD7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SayHello/Info.plist;
+				INFOPLIST_FILE = HelloWorld/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -158,7 +158,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.SayHello;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.HelloWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -170,7 +170,7 @@
 			};
 			name = Debug;
 		};
-		C8321B082ED41E1C002A8B16 /* Release */ = {
+		C8321AE72ED41B6F002A8B16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -179,7 +179,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = F67P48UXD7;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SayHello/Info.plist;
+				INFOPLIST_FILE = HelloWorld/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -190,7 +190,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.SayHello;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.HelloWorld;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -202,7 +202,7 @@
 			};
 			name = Release;
 		};
-		C8321B092ED41E1C002A8B16 /* Debug */ = {
+		C8321AE82ED41B6F002A8B16 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -266,7 +266,7 @@
 			};
 			name = Debug;
 		};
-		C8321B0A2ED41E1C002A8B16 /* Release */ = {
+		C8321AE92ED41B6F002A8B16 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -326,25 +326,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C8321AEE2ED41E1B002A8B16 /* Build configuration list for PBXProject "SayHello" */ = {
+		C8321ACD2ED41B6E002A8B16 /* Build configuration list for PBXProject "HelloWorld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C8321B092ED41E1C002A8B16 /* Debug */,
-				C8321B0A2ED41E1C002A8B16 /* Release */,
+				C8321AE82ED41B6F002A8B16 /* Debug */,
+				C8321AE92ED41B6F002A8B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8321B062ED41E1C002A8B16 /* Build configuration list for PBXNativeTarget "SayHello" */ = {
+		C8321AE52ED41B6F002A8B16 /* Build configuration list for PBXNativeTarget "HelloWorld" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C8321B072ED41E1C002A8B16 /* Debug */,
-				C8321B082ED41E1C002A8B16 /* Release */,
+				C8321AE62ED41B6F002A8B16 /* Debug */,
+				C8321AE72ED41B6F002A8B16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C8321AEB2ED41E1B002A8B16 /* Project object */;
+	rootObject = C8321ACA2ED41B6E002A8B16 /* Project object */;
 }
