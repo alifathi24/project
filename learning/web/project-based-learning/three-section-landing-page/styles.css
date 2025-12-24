@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    /* gap: 200px; */
+    justify-content: space-between;
+}
+
+nav > ul > li > a {
+    list-style-type: none;
+    text-decoration: none;
+}
+.login-singup a {
+    display: flex;
+    justify-content: space-between;
+
+}
