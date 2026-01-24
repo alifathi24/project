@@ -6,6 +6,7 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         LocalDate today = LocalDate.now();
         System.out.println("Welcome to CLI expense tracker");
+        
         System.out.println("======================================");
         System.out.println("\n\tToday's date is: " + today);
         System.out.println("======================================");
