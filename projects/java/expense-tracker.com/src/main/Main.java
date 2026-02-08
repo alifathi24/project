@@ -8,25 +8,27 @@ public class Main {
         System.out.println("Welcome to CLI expense tracker");
         
         System.out.println("======================================");
-        System.out.println("\n\tToday's date is: " + today);
-        System.out.println("======================================");
-        System.out.println("\tEnter the expense category:\n\n\t 1.Grocery\n\t 2.Rent\n\t 3.Utilities\n\t 4.Internet and Substription\n\t 5.Phone\n\t 6.Transportation\n\t 7.Other\n");
 
-        int expenseCategory = Integer.valueOf(scan.nextInt());
-        double expenseAmount = Double.valueOf(scan.nextDouble());
-        System.out.println("Category is: " + expenseCategory);
-        System.out.println("Expense amount is $" + expenseAmount);
-        
-        switch (expenseCategory) {
-            case 1:
-                System.out.println("Expense is: " + expenseCategory);
-                System.out.println("Its cost is: $" + expenseAmount);
-                
-                break;
-        
-            default:
-                break;
+        while (true) {
+            System.out.println("\n\tToday's date is: " + today);
+            System.out.println("What would like to today?");
+            System.out.println("======================================");
+            System.out.println("Please select from the following: ");
+            System.out.println("\n\t1. Add expense");
+            System.out.println("\n\t2. List expense");
+            System.out.println("\n\t3. Show total");
+            System.out.println("\n\t4. Exit");
+            int menu = Integer.valueOf(scan.nextInt());
+
+            if (menu == 1) {
+                System.out.println("Adding expense ....");
+            } else if (menu == 2) {
+                System.out.println("Listing " + today +"s expense ....");
+            } else if (menu == 3) {
+                System.out.println("Total is %...");
+            }
         }
+        
 
 
         
