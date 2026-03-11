@@ -7,24 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		C8A88A7E2F36C8710045D1B3 /* CentWise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CentWise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C80D98B92F562B0A001311C5 /* OrbitFinance.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrbitFinance.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		C8A88A802F36C8710045D1B3 /* CentWise */ = {
+		C80D98BB2F562B0A001311C5 /* OrbitFinance */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = CentWise;
-			sourceTree = "<group>";
-		};
-		C8A88A9F2F36C9B20045D1B3 /* Preview */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Preview;
+			path = OrbitFinance;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		C8A88A7B2F36C8710045D1B3 /* Frameworks */ = {
+		C80D98B62F562B0A001311C5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -34,19 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C8A88A752F36C8710045D1B3 = {
+		C80D98B02F562B0A001311C5 = {
 			isa = PBXGroup;
 			children = (
-				C8A88A9F2F36C9B20045D1B3 /* Preview */,
-				C8A88A802F36C8710045D1B3 /* CentWise */,
-				C8A88A7F2F36C8710045D1B3 /* Products */,
+				C80D98BB2F562B0A001311C5 /* OrbitFinance */,
+				C80D98BA2F562B0A001311C5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		C8A88A7F2F36C8710045D1B3 /* Products */ = {
+		C80D98BA2F562B0A001311C5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C8A88A7E2F36C8710045D1B3 /* CentWise.app */,
+				C80D98B92F562B0A001311C5 /* OrbitFinance.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -54,65 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C8A88A7D2F36C8710045D1B3 /* CentWise */ = {
+		C80D98B82F562B0A001311C5 /* OrbitFinance */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C8A88A892F36C8720045D1B3 /* Build configuration list for PBXNativeTarget "CentWise" */;
+			buildConfigurationList = C80D98C62F562B0B001311C5 /* Build configuration list for PBXNativeTarget "OrbitFinance" */;
 			buildPhases = (
-				C8A88A7A2F36C8710045D1B3 /* Sources */,
-				C8A88A7B2F36C8710045D1B3 /* Frameworks */,
-				C8A88A7C2F36C8710045D1B3 /* Resources */,
+				C80D98B52F562B0A001311C5 /* Sources */,
+				C80D98B62F562B0A001311C5 /* Frameworks */,
+				C80D98B72F562B0A001311C5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				C8A88A802F36C8710045D1B3 /* CentWise */,
-				C8A88A9F2F36C9B20045D1B3 /* Preview */,
+				C80D98BB2F562B0A001311C5 /* OrbitFinance */,
 			);
-			name = CentWise;
+			name = OrbitFinance;
 			packageProductDependencies = (
 			);
-			productName = CentWise;
-			productReference = C8A88A7E2F36C8710045D1B3 /* CentWise.app */;
+			productName = OrbitFinance;
+			productReference = C80D98B92F562B0A001311C5 /* OrbitFinance.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		C8A88A762F36C8710045D1B3 /* Project object */ = {
+		C80D98B12F562B0A001311C5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 2620;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
-					C8A88A7D2F36C8710045D1B3 = {
+					C80D98B82F562B0A001311C5 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
 			};
-			buildConfigurationList = C8A88A792F36C8710045D1B3 /* Build configuration list for PBXProject "CentWise" */;
+			buildConfigurationList = C80D98B42F562B0A001311C5 /* Build configuration list for PBXProject "OrbitFinance" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = C8A88A752F36C8710045D1B3;
+			mainGroup = C80D98B02F562B0A001311C5;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = C8A88A7F2F36C8710045D1B3 /* Products */;
+			productRefGroup = C80D98BA2F562B0A001311C5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C8A88A7D2F36C8710045D1B3 /* CentWise */,
+				C80D98B82F562B0A001311C5 /* OrbitFinance */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		C8A88A7C2F36C8710045D1B3 /* Resources */ = {
+		C80D98B72F562B0A001311C5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C8A88A7A2F36C8710045D1B3 /* Sources */ = {
+		C80D98B52F562B0A001311C5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -132,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		C8A88A872F36C8720045D1B3 /* Debug */ = {
+		C80D98C42F562B0B001311C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -196,7 +189,7 @@
 			};
 			name = Debug;
 		};
-		C8A88A882F36C8720045D1B3 /* Release */ = {
+		C80D98C52F562B0B001311C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -253,7 +246,7 @@
 			};
 			name = Release;
 		};
-		C8A88A8A2F36C8720045D1B3 /* Debug */ = {
+		C80D98C72F562B0B001311C5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -273,7 +266,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.CentWise;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.OrbitFinance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -285,7 +278,7 @@
 			};
 			name = Debug;
 		};
-		C8A88A8B2F36C8720045D1B3 /* Release */ = {
+		C80D98C82F562B0B001311C5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -305,7 +298,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.CentWise;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fathiali.OrbitFinance;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -320,25 +313,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		C8A88A792F36C8710045D1B3 /* Build configuration list for PBXProject "CentWise" */ = {
+		C80D98B42F562B0A001311C5 /* Build configuration list for PBXProject "OrbitFinance" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C8A88A872F36C8720045D1B3 /* Debug */,
-				C8A88A882F36C8720045D1B3 /* Release */,
+				C80D98C42F562B0B001311C5 /* Debug */,
+				C80D98C52F562B0B001311C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C8A88A892F36C8720045D1B3 /* Build configuration list for PBXNativeTarget "CentWise" */ = {
+		C80D98C62F562B0B001311C5 /* Build configuration list for PBXNativeTarget "OrbitFinance" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C8A88A8A2F36C8720045D1B3 /* Debug */,
-				C8A88A8B2F36C8720045D1B3 /* Release */,
+				C80D98C72F562B0B001311C5 /* Debug */,
+				C80D98C82F562B0B001311C5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = C8A88A762F36C8710045D1B3 /* Project object */;
+	rootObject = C80D98B12F562B0A001311C5 /* Project object */;
 }
