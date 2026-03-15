@@ -1,0 +1,8 @@
+Goal is to write a query that 
+Write SQL query calculating top 10 products by revenue.
+
+SOLUTION
+
+`SELECT products from list products and list from top 10 by sales or revenue`
+
+SQL - query 
